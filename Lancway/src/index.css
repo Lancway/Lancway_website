@@ -1,2 +1,9 @@
 
   
+  main {
+    position: relative;
+    transition: margin-left 0.3s;
+    margin-left: 50px;
+  }
+  
+  

@@ -187,16 +187,5 @@ ul {
   }
 }
 
-main {
-  position: relative;
-  left: var(--menu-width);
-  width: calc(100% - var(--menu-width));
-  transition: 0.3s;
-  padding: 20px;
-  color: white;
-}
 
-.sidebar.collapsed + main {
-  left: var(--collapsed-width);
-  width: calc(100% - var(--collapsed-width));
-}
+

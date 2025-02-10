@@ -11,16 +11,20 @@
   justify-content: space-between;
   padding: 0 20px;
   align-items: center;
+  
 }
 
 .logo {
   font-size: 24px;
   font-weight: bold;
   color: white;
-  margin-left: 20px;
+  margin-left: 30px;
   display: flex;
   align-items: center; /* Align the image vertically */
   justify-content: center; /* Center the logo horizontally */
+}
+.greet{
+  font-size: 24px;
 }
 
 .logo img {
@@ -58,4 +62,15 @@
   border-radius: 50%;
   object-fit: cover;
   margin-left: 10px;
+  margin-right: 70px;
+  flex-shrink: 0; /* Prevent the profile image from shrinking */
+}
+
+@media (max-width: 500px) {
+  .logo{
+    margin-left: 0px;
+  }
+  .greet {
+    font-size: 14px;
+  }
 }
