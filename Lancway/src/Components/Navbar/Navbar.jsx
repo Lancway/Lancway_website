@@ -1,5 +1,7 @@
 import "./Navbars.css";
 import logo from "../../assets/LancLogobgremoved.png";
+import defaultProfile from "../../assets/profile.jpg"; // Ensure the correct file extension
+
 function Navbar(props) {
   return (
     <div className="Nav">
@@ -12,7 +14,7 @@ function Navbar(props) {
             <div className="greet">Hi, {props.username}</div>
             <img
               className="profile-pic"
-              src={props.profileImage || "/path-to-default-profile-image.jpg"}
+              src={props.profileImage || defaultProfile} // Corrected usage
               alt="Profile"
             />
           </>
