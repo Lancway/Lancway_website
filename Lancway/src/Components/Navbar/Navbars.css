@@ -1,62 +1,61 @@
 .Nav {
-    height: 80px;
-    width: 100%;
-    background: linear-gradient(135deg, rgba(54, 52, 52, 0.1), rgba(255, 255, 255, 0));
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    color: white;
-    display: flex;
-    position: sticky;
-    top: 0;
-    justify-content: space-between;
-    padding: 0 20px;
-    align-items: center;
-  }
-  
-  .logo {
-    font-size: 24px;
-    font-weight: bold;
-    color: white;
-    margin-left: 20px;
-    display: flex;
-    align-items: center; /* Align the image vertically */
-    justify-content: center; /* Center the logo horizontally */
-  }
-  
-  .logo img {
-    width: 150px; /* Set the logo width */
-    height: auto; /* Maintain aspect ratio */
-    object-fit: contain; /* Ensure the logo scales properly */
-  }
-  
-  .nav-links {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-  }
-  
-  .nav-links a {
-    padding: 10px 20px;
-    background-color: #00aaff;
-    color: white;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
-  }
-  
-  .nav-links a:hover {
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
-    transform: translateY(-2px);
-  }
-  
-  .profile-pic {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-left: 10px;
-  }
-  
+  height: 80px;
+  width: 100%;
+  background: linear-gradient(135deg, rgba(54, 52, 52, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: white;
+  display: flex;
+  position: fixed; /* Use fixed position to stick the navbar at the top */
+  top: 0; /* Set the navbar to the top of the page */
+  justify-content: space-between;
+  padding: 0 20px;
+  align-items: center;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: white;
+  margin-left: 20px;
+  display: flex;
+  align-items: center; /* Align the image vertically */
+  justify-content: center; /* Center the logo horizontally */
+}
+
+.logo img {
+  width: 150px; /* Set the logo width */
+  height: auto; /* Maintain aspect ratio */
+  object-fit: contain; /* Ensure the logo scales properly */
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-links a {
+  padding: 10px 20px;
+  background-color: #00aaff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.nav-links a:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+.profile-pic {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-left: 10px;
+}
