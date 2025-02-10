@@ -31,7 +31,7 @@ const Sidebar = () => {
 
       <a href="/" className="logo-wrapper">
         <span className="fa-brands fa-uikit"></span>
-        <span className="brand-name">Smart UI Studio</span>
+        <span className="brand-name">Lancway</span>
       </a>
 
       <div className="separator"></div>

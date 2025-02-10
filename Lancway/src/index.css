@@ -1,0 +1,15 @@
+:root {
+    --menu-width: 240px;
+    --collapsed-width: 50px;
+  }
+  
+  main {
+    position: relative;
+    margin-left: var(--menu-width);
+    transition: margin-left 0.3s;
+  }
+  
+  .sidebar.collapsed + main {
+    margin-left: var(--collapsed-width);
+  }
+  

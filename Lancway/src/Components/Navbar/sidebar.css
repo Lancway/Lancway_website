@@ -5,13 +5,11 @@ body {
   font-family: "Baloo Bhai 2";
   background: #151f29;
   min-height: 100vh;
-  margin: 0;
-  display: flex;
 }
 
 :root {
-  --menu-width: 300px;
-  --collapsed-width: 50px;
+  --menu-width: 240px;
+  --collapsed-width: 60px;
 }
 
 .sidebar {
@@ -23,7 +21,7 @@ body {
   color: white;
   transition: 0.3s;
   box-shadow: 0px 0px 15px 0px #00000073;
-  z-index: 1000;
+  z-index: 1;
 }
 
 .sidebar.collapsed {
@@ -37,14 +35,13 @@ body {
   right: 0;
   padding: 8px;
   border: none;
-  font-size: 18px;
+  font-size: 15px;
   aspect-ratio: 1;
   border-radius: 0 50% 50% 0;
   cursor: pointer;
   transform: translateX(100%);
   box-shadow: 2px 0px 5px 0px #1a1a1a;
   background: #1b2b42;
-  z-index: 1001;
 }
 
 .logo-wrapper {
@@ -88,7 +85,6 @@ a {
 
 ul {
   list-style: none;
-  padding: 0;
 }
 
 .menu-items a {
@@ -124,7 +120,6 @@ ul {
   transition-delay: 0.3s;
 }
 
-/* Tooltip for collapsed sidebar */
 .tooltip {
   position: absolute;
   right: -25px;
@@ -156,47 +151,4 @@ ul {
   font-size: 30px;
   color: #161616;
   transform: translate(-50%, -50%);
-}
-
-/* RESPONSIVE DESIGN */
-@media (max-width: 768px) {
-  .sidebar {
-    width: var(--collapsed-width);
-  }
-
-  .menu-btn {
-    position: fixed;
-    left: 10px;
-    top: 10px;
-    font-size: 20px;
-    background: #1b2b42;
-  }
-
-  .sidebar.expanded {
-    width: var(--menu-width);
-  }
-
-  .sidebar.expanded .brand-name {
-    visibility: visible;
-    width: auto;
-  }
-
-  .sidebar.expanded .item-name {
-    visibility: visible;
-    width: auto;
-  }
-}
-
-main {
-  position: relative;
-  left: var(--menu-width);
-  width: calc(100% - var(--menu-width));
-  transition: 0.3s;
-  padding: 20px;
-  color: white;
-}
-
-.sidebar.collapsed + main {
-  left: var(--collapsed-width);
-  width: calc(100% - var(--collapsed-width));
 }
