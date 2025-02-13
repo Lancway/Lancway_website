@@ -10,7 +10,7 @@ body {
 }
 
 :root {
-  --menu-width: 300px;
+  --menu-width: 250px;
   --collapsed-width: 60px;
 }
 
@@ -101,8 +101,9 @@ ul {
 }
 
 .menu-items a:hover {
-  color: #daddff;
-  background: #00000017;
+  padding-left: 15px;
+  color: rgb(247, 246, 201);
+  background: #212121;
   border-radius: 10px;
 }
 
