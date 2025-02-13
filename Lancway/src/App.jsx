@@ -1,5 +1,5 @@
 import Sidebar from "./Components/Navbar/Sidebar";
-import Navbar from "./Components/Navbar/Navbar";
+import Navbar from "./components/navbar/Navbar";
 import "./App.css";
 import AuthForm from "./Components/AuthForm";
 
