@@ -1,13 +1,7 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.css");
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@400&display=swap");
 
-body {
-  font-family: "Baloo Bhai 2";
-  background: #151f29;
-  min-height: 100vh;
-  margin: 0;
-  display: flex;
-}
+
 
 :root {
   --menu-width: 250px;
