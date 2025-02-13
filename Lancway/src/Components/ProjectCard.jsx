@@ -26,3 +26,13 @@ const ProjectCard = ({ project }) => {
 };
 
 export default ProjectCard;
+
+// Usage Example
+// <ProjectCard project={{
+//   image: "your-image-url.jpg",
+//   name: "Delon Revolt",
+//   price: "1,199",
+//   description: "1.83 Display | BT Calling | Fastcharge | 110+ Sports Mode | 200+ WatchFaces Smartwatch",
+//   compatibleOS: "Android & iOS",
+//   chargerType: "Pogo Pin Charging Cable"
+// }} />
