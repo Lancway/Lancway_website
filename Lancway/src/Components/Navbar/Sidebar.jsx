@@ -6,7 +6,7 @@ const Sidebar = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setCollapsed(window.innerWidth <= 768);
+      // You can log the window size here to debug, or adjust based on needs
     };
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
