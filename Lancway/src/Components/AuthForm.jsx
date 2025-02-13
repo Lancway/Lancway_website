@@ -29,19 +29,35 @@ const AuthForm = () => {
   };
 
   return (
-    <div style={{ textAlign: "center", marginTop: "50px" }}>
+    <div className="auth-container">
       {user ? (
-        <div>
-          <h2>Welcome, {user.email}</h2>
-          <button onClick={handleLogout}>Logout</button>
+        <div className="welcome-container">
+          <h2 className="welcome-message">Welcome, {user.email}</h2>
+          <button className="logout-button" onClick={handleLogout}>Logout</button>
         </div>
       ) : (
-        <form onSubmit={handleSubmit}>
-          <h2>{isLogin ? "Login" : "Sign Up"}</h2>
-          <input type="email" placeholder="Email" value={email} onChange={(e) => setEmail(e.target.value)} required />
-          <input type="password" placeholder="Password" value={password} onChange={(e) => setPassword(e.target.value)} required />
-          <button type="submit">{isLogin ? "Login" : "Sign Up"}</button>
-          <p onClick={() => setIsLogin(!isLogin)} style={{ cursor: "pointer", color: "blue" }}>
+        <form className="auth-form" onSubmit={handleSubmit}>
+          <h2 className="form-title">{isLogin ? "Login" : "Sign Up"}</h2>
+          <input
+            type="email"
+            placeholder="Email"
+            className="auth-input"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            required
+          />
+          <input
+            type="password"
+            placeholder="Password"
+            className="auth-input"
+            value={password}
+            onChange={(e) => setPassword(e.target.value)}
+            required
+          />
+          <button type="submit" className="auth-button">
+            {isLogin ? "Login" : "Sign Up"}
+          </button>
+          <p className="toggle-auth-mode" onClick={() => setIsLogin(!isLogin)}>
             {isLogin ? "Don't have an account? Sign Up" : "Already have an account? Login"}
           </p>
         </form>
