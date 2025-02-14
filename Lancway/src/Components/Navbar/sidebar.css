@@ -3,10 +3,7 @@
 
 
 
-:root {
-  --menu-width: 250px;
-  --collapsed-width: 60px;
-}
+
 
 .sidebar {
   padding: 10px;
@@ -59,10 +56,14 @@ a {
   font-size: 25px;
 }
 
-.brand-name {
-  font-size: 20px;
-  transition: 0.3s;
+.brand-name img {
+  height: 47px;
+  width: auto;  
+  object-fit: contain;
+  transition: 0.3s ease;
 }
+
+
 
 .sidebar.collapsed .brand-name {
   width: 0;
@@ -94,12 +95,7 @@ ul {
   overflow: hidden;
 }
 
-.menu-items a:hover {
-  padding-left: 15px;
-  color: rgb(247, 246, 201);
-  background: #212121;
-  border-radius: 10px;
-}
+
 
 .menu-items li {
   position: relative;
@@ -179,6 +175,21 @@ ul {
   .sidebar.expanded .item-name {
     visibility: visible;
     width: auto;
+  }
+}
+
+@media (min-width: 768px) {
+  .menu-items a {
+    transition: all 0.3s ease-in-out;
+  }
+
+  .menu-items a:hover {
+    padding-left: 15px;
+    color: rgb(247, 246, 201);
+    background: #212121;
+    border-radius: 10px;
+    transform: translateX(5px); /* Slight shift on hover */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3); /* Soft shadow effect */
   }
 }
 

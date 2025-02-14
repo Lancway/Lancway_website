@@ -1,76 +1,103 @@
+/* Navbar Container */
 .Nav {
-  height: 65px;
+  height: 80px;
   width: 100%;
   background: linear-gradient(135deg, rgba(54, 52, 52, 0.1), rgba(255, 255, 255, 0));
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   color: white;
   display: flex;
-  position: fixed; /* Use fixed position to stick the navbar at the top */
-  top: 0; /* Set the navbar to the top of the page  */
+  align-items: center;
   justify-content: space-between;
-  padding: 0 20px;
-  /* align-items: center; */
-  
+  position: fixed; /* Fixed navbar */
+  top: 0;
+  left: 0;
+  padding: 0 10px;
 }
 
-.logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  margin-left: 30px;
-  display: flex;
-  align-items: center; /* Align the image vertically */
-  justify-content: center; /* Center the logo horizontally */
-}
-.greet{
-  font-size: 24px;
-}
-
+/* Logo */
 .logo img {
-  width: 150px; /* Set the logo width */
-  height: auto; /* Maintain aspect ratio */
-  object-fit: contain; /* Ensure the logo scales properly */
+  width: 200px; /* Adjust as needed */
+  height: auto;
+  object-fit: contain;
+  margin-left: calc(var(--collapsed-width) + 13px);
 }
 
+
+
+/* Navigation Links */
 .nav-links {
   display: flex;
-  gap: 20px;
   align-items: center;
+  gap: 15px;
 }
 
 .nav-links a {
-  padding: 10px 20px;
+  padding: 8px 16px;
   background-color: #00aaff;
   color: white;
-  border: none;
   border-radius: 8px;
   font-size: 16px;
-  cursor: pointer;
-  transition: all 0.3s ease;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
 .nav-links a:hover {
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 3px 6px rgba(0, 0, 0, 0.1);
+  background-color: #0088cc;
   transform: translateY(-2px);
 }
 
-.profile-pic {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-left: 10px;
-  margin-right: 70px;
-  flex-shrink: 0; /* Prevent the profile image from shrinking */
+/* Greeting Text */
+.greet {
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
 }
 
-@media (max-width: 500px) {
-  .logo{
-    margin-left: 0px;
+/* Profile Image */
+.profile-pic {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid white;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+  .logo img{
+    margin-left: 60px;
   }
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .Nav {
+    padding: 0 10px;
+    height: 70px;
+  }
+
+  .logo img {
+    width: 120px;
+  }
+
   .greet {
     font-size: 14px;
+  }
+
+  .nav-links {
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 14px;
+    padding: 6px 12px;
+  }
+
+  .profile-pic {
+    width: 40px;
+    height: 40px;
   }
 }

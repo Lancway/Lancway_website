@@ -1,20 +1,23 @@
 import "./Navbars.css";
 import logo from "../../assets/LancLogobgremoved.png";
-import defaultProfile from "../../assets/profile.jpg"; // Ensure the correct file extension
+import defaultProfile from "../../assets/profile.jpg"; // Ensure correct path
 
-function Navbar(props) {
+function Navbar({ isLoggedIn, username, profileImage }) {
   return (
     <div className="Nav">
+      {/* Logo Section */}
       <div className="logo">
         <img src={logo} alt="Lancway" />
       </div>
+
+      {/* Navigation Links */}
       <div className="nav-links">
-        {props.isLoggedIn ? (
+        {isLoggedIn ? (
           <>
-            <div className="greet">Hi, {props.username}</div>
+            <div className="greet">Hi, {username}</div>
             <img
               className="profile-pic"
-              src={props.profileImage || defaultProfile} // Corrected usage
+              src={profileImage || defaultProfile}
               alt="Profile"
             />
           </>

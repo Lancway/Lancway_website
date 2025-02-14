@@ -8,16 +8,13 @@ import Slider from "./Slider.jsx";
 const Home = () => {
   return (
     <div style={{ display: "flex", flexDirection: "row" }}>
-      {/* Sidebar Component */}
       <Sidebar />
 
-      <Slider/>
+      <Slider />
 
       <main style={{ flexGrow: 1 }}>
-        {/* Navbar Component */}
         <Navbar username="Ritik" isLoggedIn={true} />
 
-        
         <div>
           <ProjectCard
             project={{

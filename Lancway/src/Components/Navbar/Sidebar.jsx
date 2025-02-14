@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
 import "./Sidebar.css"; // Import CSS for styling
+import logo from "../../assets/LancLogobgremoved2.png";
+
 
 const Sidebar = () => {
   const [collapsed, setCollapsed] = useState(window.innerWidth <= 768);
@@ -31,7 +33,7 @@ const Sidebar = () => {
 
       <a href="/" className="logo-wrapper">
         <span className="fa-brands fa-uikit"></span>
-        <span className="brand-name">Lancway</span>
+        <span className="brand-name"><img src={logo} alt="" /></span>
       </a>
 
       <div className="separator"></div>
