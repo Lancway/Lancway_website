@@ -1,5 +1,5 @@
 import "./Navbars.css";
-import logo from "../../assets/LancLogobgremoved.png";
+import logo from "../../assets/LancLogobgremoved2.png";
 import defaultProfile from "../../assets/profile.jpg"; // Ensure correct path
 
 function Navbar({ isLoggedIn, username, profileImage }) {
