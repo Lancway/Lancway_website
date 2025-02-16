@@ -1,159 +1,155 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
-  
+.slider-wrapper {
+  position: absolute;
+  top: 90px;
+  left: 70%; /* Moves it towards the right */
+  transform: translateX(-50%);
+  width: 60%; /* Adjust width for better fitting */
+  max-width: 800px;
+}
+
+.slider {
+  display: flex;
+  aspect-ratio: 2 / 1; /* Ensures 3:6 (1:2) aspect ratio */
+  overflow: hidden;
+  scroll-behavior: smooth;
+  box-shadow: 0 1.5rem 2.5rem -0.75rem hsla(0, 6%, 93%, 0.738);
+  border-radius: 0.5rem;
+  width: 100%;
+  max-height: 70vh; 
+}
+
+.slide {
+  flex: 0 0 100%;
+  transition: transform 0.5s ease-in-out;
+  position: relative;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.text-overlay {
+  position: absolute;
+  bottom: 5%;
+  left: 5%;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 12px 18px;
+  border-radius: 5px;
+}
+
+.text-overlay h2 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+.text-overlay p {
+  margin: 5px 0 0;
+  font-size: 1.4rem;
+}
+
+.slider-nav {
+  display: flex;
+  column-gap: 1rem;
+  position: absolute;
+  bottom: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+}
+
+.dot {
+  width: 1.8rem;
+  height: 0.4rem;
+  border-radius: 5px;
+  background-color: #fff;
+  opacity: 0.5;
+  transition: opacity ease 250ms;
+  border: none;
+  cursor: pointer;
+}
+
+.dot.active {
+  opacity: 1;
+}
+
+@media (max-width: 1024px) {
   .slider-wrapper {
-    position: absolute;
-    top: 80px;
-    left: 70%;  /* Moves it towards the right */
+    left: 53%;
     transform: translateX(-50%);
-    width: 60%;  /* Adjust width for better fitting */
-    max-width: 800px; 
+    width: 90%;
   }
-  
-  .slider {
-    display: flex;
-    aspect-ratio: 2 / 1; /* Ensures 3:6 (1:2) aspect ratio */
-    overflow: hidden;
-    scroll-behavior: smooth;
-    box-shadow: 0 1.5rem 2.5rem -0.75rem hsla(0, 6%, 93%, 0.738);
-    border-radius: 0.5rem;
-    width: 100%;
-    max-height: 70vh; /* Limits height to maintain ratio */
-  }
-  
-  .slide {
-    flex: 0 0 100%;
-    transition: transform 0.5s ease-in-out;
-    position: relative;
-  }
-  
-  .slide img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
+
   .text-overlay {
-    position: absolute;
-    bottom: 5%;
-    left: 5%;
-    background: rgba(0, 0, 0, 0.6);
-    color: white;
-    padding: 12px 18px;
-    border-radius: 5px;
+    padding: 10px 15px;
   }
-  
+
   .text-overlay h2 {
-    margin: 0;
-    font-size: 2rem;
+    font-size: 1.6rem;
   }
-  
+
   .text-overlay p {
-    margin: 5px 0 0;
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider-wrapper {
+    top: 75px;
+    width: 85%;
+    left: 54%;
+    transform: translateX(-50%);
+  }
+
+  .text-overlay {
+    padding: 8px 12px;
+  }
+
+  .text-overlay h2 {
     font-size: 1.4rem;
   }
-  
+
+  .text-overlay p {
+    font-size: 1rem;
+  }
+
   .slider-nav {
-    display: flex;
-    column-gap: 1rem;
-    position: absolute;
-    bottom: 1.25rem;
-    left: 50%;
+    bottom: 0.8rem;
+  }
+}
+
+@media (max-width: 786px) {
+  .slider-wrapper {
+    top: 73px;
+    width: 80%;
+    max-width: 100%;
+    left: 56.5%;
     transform: translateX(-50%);
-    z-index: 1;
   }
-  
-  .dot {
-    width: 1.8rem;
-    height: 0.4rem;
-    border-radius: 5px;
-    background-color: #fff;
-    opacity: 0.5;
-    transition: opacity ease 250ms;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .dot.active {
-    opacity: 1;
-  }
-  
-  /* 📱 Mobile & Tablet Responsive Adjustments */
-  @media (max-width: 1024px) {
-    .slider-wrapper {
-      left: 50%;
-      transform: translateX(-50%);
-      width: 90%;
-    }
-  
-    .text-overlay {
-      padding: 10px 15px;
-    }
-  
-    .text-overlay h2 {
-      font-size: 1.6rem;
-    }
-  
-    .text-overlay p {
-      font-size: 1.2rem;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .slider-wrapper {
-      width: 95%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    .text-overlay {
-      padding: 8px 12px;
-    }
-  
-    .text-overlay h2 {
-      font-size: 1.4rem;
-    }
-  
-    .text-overlay p {
-      font-size: 1rem;
-    }
-  
-    .slider-nav {
-      bottom: 0.8rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .slider-wrapper {
-      width: 100%;
-      max-width: 100%;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    .text-overlay {
-      text-align: center;
-      width: 85%;
-      padding: 6px 10px;
-      left: 50%;
-      transform: translateX(-50%);
-    }
-  
-    .text-overlay h2 {
-      font-size: 1.2rem;
-    }
-  
-    .text-overlay p {
-      font-size: 0.9rem;
-    }
-  
-    .slider-nav {
-      bottom: 0.5rem;
-    }
-  
+  .logo-wrapper{
+    padding: 3.5px 10px;
     
   }
-  
+
+  .text-overlay {
+    text-align: center;
+    width: 85%;
+    padding: 6px 10px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .text-overlay h2 {
+    font-size: 1.2rem;
+  }
+
+  .text-overlay p {
+    font-size: 0.9rem;
+  }
+
+  .slider-nav {
+    bottom: 0.5rem;
+  }
+}

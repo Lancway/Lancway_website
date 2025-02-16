@@ -1,18 +1,30 @@
-/* Container for the authentication form */
-.auth-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh; /* Full viewport height */
-  background: url("../assets/bg-image.jpg") no-repeat center center/cover;
-  /* Add a background image if needed */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* Glassmorphic effect for the form */
+
+.auth-container {
+  display: flex;
+  height: 100vh;
+  width: calc(100vw - 50px);
+  overflow: hidden;
+  background: url(../assets/backgroundLogin.avif) no-repeat center center;
+  background-size: cover;
+  justify-content: center;
+  align-items: center;
+}
+
 .auth-form {
-  background: rgba(255, 255, 255, 0.15); /* Transparent white */
-  backdrop-filter: blur(10px); /* Blur effect */
-  -webkit-backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  background: rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
   border-radius: 15px;
   padding: 40px;
   box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
@@ -23,7 +35,6 @@
   animation: fadeIn 0.6s ease-in-out;
 }
 
-/* Form title */
 .form-title {
   font-size: 24px;
   color: #ffffff;
@@ -31,7 +42,6 @@
   font-weight: bold;
 }
 
-/* Subtitle for guidance */
 .form-subtext {
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
@@ -54,43 +64,37 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Input placeholder */
 .auth-input::placeholder {
   color: rgba(255, 255, 255, 0.7);
 }
 
-/* Input focus effect */
 .auth-input:focus {
   background: rgba(255, 255, 255, 0.3);
   transform: scale(1.05);
 }
 
-/* Login/Signup button */
 .auth-button {
-    margin-top: 10px;
-    width: 100%;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 8px;
-    font-size: 16px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-  }
-  
-  /* Hover Effect */
-  .auth-button:hover {
-    background: linear-gradient(135deg, #0072ff, #00c6ff); /* Reverse gradient */
-    box-shadow: 0 6px 12px rgba(0, 114, 255, 0.4); /* Glowing effect */
-    transform: scale(1.05); /* Slight zoom effect */
-  }
-  
+  margin-top: 10px;
+  width: 100%;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background: linear-gradient(135deg, #00c6ff, #0072ff);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
 
-/* Toggle text for login/signup */
+.auth-button:hover {
+  background: linear-gradient(135deg, #0072ff, #00c6ff);
+  box-shadow: 0 6px 12px rgba(0, 114, 255, 0.4);
+  transform: scale(1.05);
+}
+
 .toggle-auth-mode {
   color: rgba(255, 255, 255, 0.8);
   margin-top: 15px;
@@ -166,17 +170,36 @@
 
 /* Responsive Design */
 @media (max-width: 500px) {
-  .auth-form,
-  .welcome-container {
-    padding: 30px;
+  .auth-container {
+    min-height: 85vh; /* Use min-height for better adaptation */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-left: 10px; /* Makes centering more balanced */
+  }
+
+  .auth-form {
+    padding: 25px;
+    max-width: 95%;
+    width: 100%;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
   }
 
   .form-title {
     font-size: 20px;
+    text-align: center;
+  }
+
+  .auth-input {
+    font-size: 14px;
+    padding: 10px;
+    margin-bottom: 5px;
   }
 
   .auth-button,
   .logout-button {
     font-size: 14px;
+    padding: 10px 16px; /* Adjust padding for better touch accessibility */
   }
 }

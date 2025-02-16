@@ -10,12 +10,12 @@ const Home = () => {
     <div style={{ display: "flex", flexDirection: "row" }}>
       <Sidebar />
 
-      <Slider />
+      {/* <Slider /> */}
 
       <main style={{ flexGrow: 1 }}>
         <Navbar username="Ritik" isLoggedIn={true} />
 
-        <div>
+        {/* <div>
           <ProjectCard
             project={{
               image: "your-image-url.jpg",
@@ -35,9 +35,9 @@ const Home = () => {
               experience: "10",
             }}
           />
-        </div>
+        </div> */}
         <div>
-          <AuthForm />
+           <AuthForm /> 
         </div>
       </main>
     </div>
