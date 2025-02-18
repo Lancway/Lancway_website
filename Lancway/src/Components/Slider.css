@@ -1,15 +1,15 @@
 .slider-wrapper {
   position: absolute;
   top: 90px;
-  left: 63%; /* Moves it towards the right */
+  left: 50%; /* Moves it towards the right */
   transform: translateX(-50%);
   width: 70%; /* Adjust width for better fitting */
-  max-width: 1200px;
+  max-width: 1400px;
 }
 
 .slider {
   display: flex;
-  aspect-ratio: 2 / 1; /* Ensures 3:6 (1:2) aspect ratio */
+  aspect-ratio: 3 / 2; 
   overflow: hidden;
   scroll-behavior: smooth;
   box-shadow: 0 1rem 1.5rem -0.5rem hsla(0, 6%, 93%, 0.738);
@@ -80,6 +80,10 @@
     left: 53%;
     transform: translateX(-50%);
     width: 90%;
+  }
+  .slider{
+    aspect-ratio: 2 / 1.1 
+
   }
 
   .text-overlay {

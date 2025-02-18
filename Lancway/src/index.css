@@ -1,15 +1,7 @@
 @import "tailwindcss";
 
-main {
-  position: relative;
-  transition: margin-left 0.3s;
-  margin-left: 50px;
-}
-
 body {
   font-family: "Baloo Bhai 2";
   background: #151f29;
-  min-height: 100vh;
-  margin: 0;
-  display: flex;
 }
+
