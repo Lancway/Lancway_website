@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { signUp, login, logout } from "../firebase/Auth";
-import "./Components.css";
+import { signUp, login, logout } from "../../firebase/Auth";
+import "./AuthForm.css";
 
 const AuthForm = () => {
   const [email, setEmail] = useState("");
@@ -32,7 +32,7 @@ const AuthForm = () => {
   const formatUserName = (email) => {
     if (!email) return "";
     const namePart = email.split("@")[0]; // Extracts before '@'
-    return namePart.charAt(0).toUpperCase() + namePart.slice(1);
+    return namePart.charAt(0).toUpperCase() + namePart.slice(1) + " ";
   };
 
   return (

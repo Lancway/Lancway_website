@@ -1,14 +1,12 @@
 
 import "./App.css";
+import Home from "./components/Home";
 
-import Home from "./Components/Home";
 
 const App = () => {
   return (
     <>
-        <div>
           <Home/>
-        </div>
         
     </>
         
