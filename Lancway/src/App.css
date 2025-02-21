@@ -1,11 +1,7 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
-:root {
-    --menu-width: 250px;
-    --collapsed-width: 60px;
-  }

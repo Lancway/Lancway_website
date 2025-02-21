@@ -5,19 +5,20 @@ import AuthForm from "./Login/AuthForm.jsx";
 import Slider from "./Slider.jsx";
 // import Background from "./Backgrounds/Background.jsx";
 import Background2 from "./Backgrounds/Background2.jsx";
+import HeroCarousel from "./Sliders/HeroCarousel.jsx";
 
 const Home = () => {
   return (
-    <div style={{ display: "flex", flexDirection: "row" }}>
+    <div style={{ display: "flex", flexDirection: "row", background: "Black" }}>
       <Navbar username="Ritik" isLoggedIn={true} />
+      <Background2 />
 
       <Sidebar />
-      <Slider />
+      {/* <Slider /> */}
 
-      <main>
-        {/* <AuthForm /> */}
-        <Background2 />
-      </main>
+      <HeroCarousel/>
+
+      <main>{/* <AuthForm /> */}</main>
     </div>
   );
 };

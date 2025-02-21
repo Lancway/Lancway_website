@@ -1,0 +1,119 @@
+.swiper-container {
+  transition: transform 0.8s ease-in-out !important;
+}
+
+/* Ensure Full Screen Hero Section */
+.hero-carousel {
+  position: relative;
+  width: calc(100% - 60px);
+  height: 100vh; 
+  left: 60px;
+}
+
+/* Slide */
+.carousel-slide {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+/* Background Image */
+.slide-image {
+  width: 100%;
+  height: 100vh;
+  object-fit: cover;
+}
+
+/* Overlay */
+.carousel-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3); /* Lighter transparency */
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px); /* Safari support */
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Stronger glass-like effect */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  text-align: center;
+  color: white;
+}
+
+
+/* Content */
+.carousel-content {
+  max-width: 80%;
+  width: 600px;
+  padding: 20px;
+}
+
+.carousel-content h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.carousel-content p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+/* Buttons */
+.carousel-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.carousel-btn {
+  padding: 12px 20px;
+  background-color: rgba(0, 0, 0, 0.5); /* Dark button background */
+  border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+  border-radius: 8px;
+  color: white;
+  font-weight: bold;
+  transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+  cursor: pointer;
+  font-size: 1rem;
+}
+
+.carousel-btn:hover {
+  background-color: rgb(0, 0, 0); /* Slightly darker on hover */
+  transform: scale(1.05); /* Slightly enlarges the button */
+}
+
+.carousel-btn:active {
+  transform: scale(0.98); /* Gives a pressed effect */
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+  .carousel-overlay {
+    text-align: left;
+    padding: 10px;
+  }
+
+  .carousel-buttons {
+    flex-direction: row;
+  }
+}
+
+@media (min-width: 1024px) {
+  .carousel-overlay {
+    position: absolute;
+    top: 42vh;
+    left: 40px;
+    width: 50%;
+    height: 50vh;
+    border-radius: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px); /* Safari support */
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    padding: 20px 40px;
+  }
+}

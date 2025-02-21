@@ -12,6 +12,7 @@
   top: 0;
   left: 0;
   padding: 0 10px;
+  z-index: 999;
 }
 
 .logo {
@@ -19,7 +20,7 @@
   align-items: center; /* Centers the image vertically */
   justify-content: center; /* Optional: centers it horizontally too */
   height: 100%; /* Takes full height of its parent */
-  margin-left: 73px;
+  margin-left: 50px;
 }
 
 .logo img {
@@ -78,12 +79,12 @@
 @media (max-width: 786px) {
   .Nav {
     padding: 0 10px;
-    height: 65px;
+    height: 68px;
   }
 
   .logo img {
     width: 140px;
-    margin-left: 0;
+    margin-left: 10px;
   }
 
   .greet {
