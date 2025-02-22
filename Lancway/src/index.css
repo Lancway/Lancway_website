@@ -5,3 +5,9 @@ body {
   background: #000000;
 }
 
+:root{
+  --menu-width: 235px;
+  --collapsed-width: 60px;
+  --button-color: #00a2ff;
+}
+
