@@ -50,12 +50,12 @@ const HeroCarousel = () => {
               <img
                 src={slide.image}
                 alt={slide.title}
-                className="slide-image"
+                className="slide-image" 
               />
 
               {/* Overlay with Text */}
-              <div className="carousel-overlay">
-                <div className="carousel-content">
+              <div className="carousel-overlay" data-aos = "fade-up">
+                <div className="carousel-content" >
                   <h1>{slide.title}</h1>
                   <p>{slide.description}</p>
 

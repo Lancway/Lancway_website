@@ -1,22 +1,24 @@
-
-
+/* Main Auth Container */
 .auth-container {
   display: flex;
   height: 100vh;
-  width: calc(100vw - 50px);
+  width: calc(100vw - 80px);
+  margin-left: 60px;
   overflow: hidden;
   background-size: cover;
   justify-content: center;
   align-items: center;
 }
 
-.auth-form {
+/* Auth Form and Welcome Container should have the same styling */
+.auth-form,
+.welcome-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   position: relative;
-  background: rgba(255, 255, 255, 0.178);
+  background: rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
   border-radius: 15px;
@@ -25,48 +27,55 @@
   text-align: center;
   max-width: 450px;
   width: 90%;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.3); /* Uniform Border */
   animation: fadeIn 0.6s ease-in-out;
 }
 
-.form-title {
+/* Form Title and Welcome Message */
+.form-title,
+.welcome-message {
   font-size: 24px;
   color: #ffffff;
   margin-bottom: 10px;
   font-weight: bold;
+  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
 }
 
-.form-subtext {
+/* Form Subtext and Welcome Text */
+.form-subtext,
+.welcome-text {
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
   margin-bottom: 20px;
 }
 
-/* Input fields */
+/* Input Fields */
 .auth-input {
   width: 100%;
   padding: 12px;
   margin: 10px 0;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
   border-radius: 10px;
   background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(5px);
-  -webkit-backdrop-filter: blur(5px);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
   color: white;
   font-size: 16px;
   outline: none;
   transition: all 0.3s ease-in-out;
 }
 
-.auth-input::placeholder {
-  color: rgba(255, 255, 255, 0.7);
-}
-
 .auth-input:focus {
   background: rgba(255, 255, 255, 0.3);
+  border-color: #0072ff;
   transform: scale(1.05);
 }
 
+.auth-input::placeholder {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Auth Button */
 .auth-button {
   margin-top: 10px;
   width: 100%;
@@ -89,6 +98,7 @@
   transform: scale(1.05);
 }
 
+/* Toggle Auth Mode */
 .toggle-auth-mode {
   color: rgba(255, 255, 255, 0.8);
   margin-top: 15px;
@@ -97,41 +107,11 @@
   transition: color 0.3s ease-in-out;
 }
 
-/* Hover effect for toggle text */
 .toggle-auth-mode:hover {
   color: #00c6ff;
 }
 
-/* Welcome container */
-.welcome-container {
-  background: rgba(255, 255, 255, 0.2);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 15px;
-  padding: 40px;
-  text-align: center;
-  max-width: 400px;
-  width: 90%;
-  animation: fadeIn 0.6s ease-in-out;
-}
-
-/* Welcome message */
-.welcome-message {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  margin-bottom: 10px;
-  text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
-  transition: all 0.3s ease-in-out;
-}
-
-.welcome-text {
-  font-size: 16px;
-  color: rgba(255, 255, 255, 0.873);
-  margin-bottom: 20px;
-}
-
-/* Logout button */
+/* Logout Button */
 .logout-button {
   padding: 10px 20px;
   border: none;
@@ -143,14 +123,13 @@
   transition: all 0.3s ease-in-out;
 }
 
-/* Hover effect for logout button */
 .logout-button:hover {
   background: #ab0202;
   transform: scale(1.05);
   font-size: 17px;
 }
 
-/* Fade-in animation */
+/* Fade-in Animation */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -165,19 +144,21 @@
 /* Responsive Design */
 @media (max-width: 500px) {
   .auth-container {
-    min-height: 85vh; /* Use min-height for better adaptation */
+    min-height: 90vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding-left: 10px; /* Makes centering more balanced */
+    margin-left: 60px;
+    width: calc(100vw - 60px);
   }
 
-  .auth-form {
-    padding: 25px;
-    max-width: 95%;
+  .auth-form,
+  .welcome-container {
+    padding: 40px 25px;
+    max-width: 90%;
     width: 100%;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
   }
 
   .form-title {
@@ -194,10 +175,6 @@
   .auth-button,
   .logout-button {
     font-size: 14px;
-    padding: 10px 16px; 
+    padding: 10px 16px;
   }
 }
-
-
-
-

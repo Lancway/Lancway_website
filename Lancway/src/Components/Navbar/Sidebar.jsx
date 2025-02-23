@@ -3,20 +3,25 @@ import "./Sidebar.css";
 import logo from "../../assets/LancLogobgremoved2.png";
 
 const Sidebar = () => {
-  const [collapsed, setCollapsed] = useState(window.innerWidth >= 768);
+  // Check initial screen size for mobile or desktop
   const [isMobile, setIsMobile] = useState(window.innerWidth < 768);
+  const [collapsed, setCollapsed] = useState(true); // Default: collapsed on mobile
 
+  // Handle window resize to detect mobile view
   useEffect(() => {
     const handleResize = () => {
       const mobileView = window.innerWidth < 768;
       setIsMobile(mobileView);
-      setCollapsed(window.innerWidth >= 768); // Always collapsed on laptops
+
+      // Collapse sidebar when switching to mobile
+      if (mobileView) setCollapsed(true);
     };
 
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
 
+  // Close sidebar when clicking outside (for mobile)
   useEffect(() => {
     if (!isMobile) return;
 
@@ -32,11 +37,13 @@ const Sidebar = () => {
 
   return (
     <>
+      {/* Sidebar */}
       <div 
         className={`sidebar ${collapsed ? "collapsed" : "expanded"}`} 
         onMouseEnter={() => !isMobile && setCollapsed(false)}
         onMouseLeave={() => !isMobile && setCollapsed(true)}
       >
+        {/* Logo */}
         <a href="/" className="logo-wrapper">
           <span className="fa-brands fa-uikit"></span>
           <span className="brand-name">
@@ -46,6 +53,7 @@ const Sidebar = () => {
 
         <div className="separator"></div>
 
+        {/* Sidebar Menu Items */}
         <ul className="menu-items">
           {[
             { icon: "fa-house", label: "Home" },
@@ -66,6 +74,7 @@ const Sidebar = () => {
           ))}
         </ul>
 
+        {/* Mobile Menu Button */}
         {isMobile && (
           <button 
             className="menu-btn"

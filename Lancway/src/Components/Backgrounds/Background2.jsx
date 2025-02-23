@@ -4,16 +4,9 @@ const Background2 = () => {
   return (
     <div className="area">
       <ul className="circles">
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
+        {Array.from({ length: 20 }).map((_, i) => (
+          <li key={i}></li>
+        ))}
       </ul>
     </div>
   );

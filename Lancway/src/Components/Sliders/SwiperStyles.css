@@ -10,7 +10,7 @@
   }
   
   .swiper-pagination-bullet-active {
-    background-color: #22c55e !important;
+    background-color: var(--button-color) !important;
     transform: scale(1.2);
   }
   
