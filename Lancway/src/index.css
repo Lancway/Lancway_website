@@ -8,6 +8,11 @@ body {
 :root{
   --menu-width: 235px;
   --collapsed-width: 60px;
-  --button-color: #00a2ff;
+  --button-color: #ff6600;
+  --button-hover: #f38236; 
+  --highlight-text: #ff6600; 
+  --primary-color: #0072ff;
+  --secondary-color: #00c6ff;
+  --bg-overlay: rgba(0, 0, 0, 0.4);
+  --glass-bg: rgba(255, 255, 255, 0.15);
 }
-
