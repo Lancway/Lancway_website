@@ -76,7 +76,7 @@
   }
   
   .footer-socials a:hover {
-    color: #00c6ff;
+    color: var(--button-hover);
   }
   
   /* Footer Bottom */

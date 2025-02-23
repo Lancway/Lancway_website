@@ -5,14 +5,21 @@ body {
   background: #000000;
 }
 
-:root{
+:root {
   --menu-width: 235px;
   --collapsed-width: 60px;
-  --button-color: #ff6600;
-  --button-hover: #f38236; 
-  --highlight-text: #ff6600; 
-  --primary-color: #0072ff;
-  --secondary-color: #00c6ff;
-  --bg-overlay: rgba(0, 0, 0, 0.4);
-  --glass-bg: rgba(255, 255, 255, 0.15);
+  --button-color: #ff6600; /* Primary Button Color */
+  --button-hover: #f38236; /* Button Hover */
+  --highlight-text: #ff6600; /* Highlighted Text */
+  --secondary-color: #00c6ff; /* Secondary Accent Color */
+  --bg-overlay: rgba(0, 0, 0, 0.4); /* Background Overlay */
+  --glass-bg: rgba(255, 255, 255, 0.15); /* Glass Effect Background */
+  --glass-border: rgba(255, 255, 255, 0.3); /* Glass Effect Border */
+  --text-color: #333; /* Default Text Color */
+  --box-shadow-color: rgba(255, 102, 0, 0.3); /* Button Glow */
+  --box-shadow-hover: rgba(255, 102, 0, 0.6); /* Stronger Glow */
+  --box-shadow-color-blue: rgba(0, 198, 255, 0.6); /* Button Glow */
+  --box-shadow-hover-blue: rgba(0, 198, 255, 0.3); /* Stronger Glow */
+  --paragraph-color: #ddd; /* Light gray for paragraphs */
+
 }

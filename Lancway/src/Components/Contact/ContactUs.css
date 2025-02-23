@@ -1,0 +1,198 @@
+/* Overlay to Darken Background */
+.contact-overlay {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Dark overlay */
+  padding: 60px 20px ;
+}
+
+/* Container */
+.contact-container {
+  text-align: center;
+  padding: 60px 20px 40px 80px;
+  color: var(--text-color);
+  position: relative;
+  z-index: 2; /* Ensure content is above overlay */
+  overflow: hidden; /* Prevent AOS overflow */
+}
+
+
+/* Title & Description */
+.contact-title {
+  font-size: 32px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: var(--button-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.contact-title::before,
+.contact-title::after {
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: var(--button-color);
+  margin: 0 15px;
+}
+
+.contact-description {
+  font-size: 16px;
+  max-width: 900px;
+  margin: 0 auto 30px;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+/* Contact Section */
+.contact-content {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+/* Glass Effect Boxes */
+.glass-box {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  padding: 20px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  width: 100%;
+  max-width: 500px;
+  position: relative;
+  color: #ffffff;
+}
+
+/* Contact Info Section */
+.contact-info {
+  text-align: left;
+}
+
+/* Location, Email, and Phone Styling */
+.contact-info h3 {
+  text-align: left;
+  margin: 5px 0;
+  color: #fff;
+  font-size: 18px;
+}
+
+.contact-info i {
+  margin-right: 5px;
+}
+
+.contact-info a {
+  color: var(--highlight-text);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.contact-info p {
+  margin-left: 27px;
+  margin-bottom: 10px;
+}
+.phone-call a {
+  display: inline-block; /* Or block */
+  margin-left: 27px;
+  margin-bottom: 10px;
+}
+
+/* Darkening text with shadow */
+.contact-text {
+  text-align: left;
+  margin-left: 20px;
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+/* Input Wrapper */
+.input-wrapper {
+  background: rgba(255, 255, 255, 0.15);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  padding: 12px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  position: relative;
+}
+
+/* Form Inputs */
+.input-wrapper input,
+.input-wrapper textarea {
+  width: 100%;
+  background: transparent;
+  border: none;
+  outline: none;
+  padding: 8px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+/* Icons */
+.input-wrapper i {
+  color: var(--button-color);
+  position: absolute;
+  top: 22px;
+  left: 18px;
+  font-size: 18px;
+}
+
+/* Adjust padding for inputs */
+.input-wrapper input,
+.input-wrapper textarea {
+  padding-left: 35px;
+}
+
+/* Special case for textarea */
+.textarea-wrapper textarea {
+  height: 120px;
+  resize: none;
+  padding-left: 40px;
+  padding-top: 14px;
+}
+
+/* Send Button */
+.send-button {
+  width: 100%;
+  background: var(--button-color);
+  color: #fff;
+  font-size: 16px;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-button:hover {
+  background: var(--button-hover);
+  box-shadow: 0 0 10px rgba(255, 102, 0, 0.9);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact-title::before,
+  .contact-title::after {
+    content: "";
+    width: 56px;
+    height: 3px;
+    background-color: var(--button-color);
+    margin: 0 15px;
+  }
+
+  .contact-title {
+    font-size: 25px;
+  }
+  .contact-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .glass-box {
+    max-width: 100%;
+  }
+}

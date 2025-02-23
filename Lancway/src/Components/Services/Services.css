@@ -1,17 +1,17 @@
 /* 🌟 Common Section Styles */
 .services {
   text-align: center;
-  padding: 60px 20px;
-  background: url("../../assets/services_background.jpg") no-repeat center center;
+  background: url("../../assets/services_background.jpg") no-repeat center
+    center;
   background-size: cover;
   background-attachment: fixed;
-  width: 100%; 
+  width: 100%;
   min-height: 100vh;
   margin: 0;
-  padding: 60px 20px;
+  padding: 60px 10px 60px 70px;
   box-sizing: border-box;
   position: relative;
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .how-it-works,
@@ -58,15 +58,17 @@
 .pricing h2 {
   font-size: 32px;
   font-weight: 700;
-  color: #fff;
+  color: var(--button-color);
 }
 
 .services-heading span,
 .how-it-works span,
 .pricing span {
-  width: 50px;
-  height: 2px;
-  background-color: #47b5ff;
+  content: "";
+  width: 60px;
+  height: 3px;
+  background-color: var(--button-color);
+  margin: 0 15px;
 }
 
 .services p,
@@ -101,7 +103,7 @@
   border-radius: 15px;
   backdrop-filter: blur(15px);
   background: rgba(255, 255, 255, 0.1);
-  box-shadow: 0px 4px 10px rgba(0, 198, 255, 0.3);
+  box-shadow: 0px 4px 10px var(--box-shadow-color-blue);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
   border: 1px solid rgba(255, 255, 255, 0.2);
   text-align: center;
@@ -111,7 +113,7 @@
 .step-card:hover,
 .pricing-card:hover {
   transform: translateY(-5px);
-  box-shadow: 0px 6px 20px rgba(0, 198, 255, 0.6);
+  box-shadow: 0px 6px 20px var(--box-shadow-color-blue);
 }
 
 /* 🎯 Icons */
@@ -119,7 +121,7 @@
 .step-card .icon,
 .pricing-card .icon {
   font-size: 40px;
-  color: #47b5ff;
+  color: var(--button-color);
   margin-bottom: 15px;
 }
 
@@ -174,10 +176,20 @@
 }
 
 @media (max-width: 500px) {
+  .services-heading span,
+  .how-it-works span,
+  .pricing span {
+    content: "";
+    width: 56px;
+    height: 3px;
+    background-color: var(--button-color);
+    margin: 0 15px;
+  }
+
   .services h2,
   .how-it-works h2,
   .pricing h2 {
-    font-size: 28px;
+    font-size: 25px;
   }
 
   .service-card,
@@ -197,7 +209,7 @@
   .services,
   .how-it-works,
   .pricing {
-    padding-left: 60px;
+    padding-left: 80px;
     padding-right: 20px;
   }
 }

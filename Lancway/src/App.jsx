@@ -2,22 +2,22 @@ import "./App.css";
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Sidebar from "./components/Navbar/Sidebar";
-// import Home from "./components/Home";
 import Home from "./pages/Home";
-// import Login from "./Pages/Login";
-// import Services from "./pages/Services";
+import Login from "./Pages/Login";
+import Services from "./pages/Services";
 import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Background2 from "./components/Backgrounds/Background2";
 
 const App = () => {
-  // Initialize AOS for animations when the component mounts
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
 
   return (
     <>
+      <Background2/>
       <Navbar username={"Ritik"} isLoggedIn={true} />
       <Sidebar />
       
