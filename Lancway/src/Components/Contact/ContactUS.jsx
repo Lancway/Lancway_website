@@ -72,7 +72,7 @@ const ContactUS = () => {
               <i className="fas fa-comment-dots"></i>
               <textarea placeholder="Message" rows="5" required></textarea>
             </div>
-            <button type="submit" className="send-button" data-aos="" >
+            <button type="submit" className="send-button">
               <i className="fas fa-paper-plane"></i> Send Message
             </button>
           </form>
