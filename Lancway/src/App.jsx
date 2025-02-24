@@ -9,6 +9,8 @@ import { useEffect } from "react";
 import AOS from "aos";
 import "aos/dist/aos.css";
 import Background2 from "./components/Backgrounds/Background2";
+import Contact from "./pages/Contact";
+
 
 const App = () => {
   useEffect(() => {
@@ -21,13 +23,12 @@ const App = () => {
       <Navbar username={"Ritik"} isLoggedIn={true} />
       <Sidebar />
       
-      <Home />
+      {/* <Home/> */}
       {/* <Login/> */}
+      {/* <Services/> */}
+
+      <Contact/>
       
-      {/* Services Page */}
-      {/* <Services /> */}
-      
-      {/* Footer Section */}
       <Footer/>
     </>
   );

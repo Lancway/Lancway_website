@@ -8,118 +8,11 @@
   min-height: 100vh;
 }
 
-/* ✨ Hero Section */
-/* ✨ Hero Section */
-.hero {
-    margin-left: 80px;  
-    margin-right: 20px; 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    border-radius: 12px;
-    background: url("https://img.freepik.com/free-photo/website-hosting-concept-with-bright-light_23-2149406783.jpg?t=st=1740303787~exp=1740307387~hmac=61f305aed8a860b296e202856b32f7bf54d97d375d5ba9a211a313f4480b12f9&w=1800") 
-      no-repeat center center/cover;
-    position: relative;
-    min-height: 60vh;
-    width: calc(100% - 100px); 
-    overflow: hidden;
-}
-
-  
-  /* Overlay for better readability */
-  .hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.4); /* Dark overlay */
-    backdrop-filter: blur(5px);
-  }
-  
-  /* Ensure content is above the overlay */
-  .hero h1,
-  .hero p,
-  .explore-btn {
-    position: relative;
-    z-index: 2;
-  }
-  
-  /* Adjust heading and text styles */
-  .hero h1 {
-    font-size: 2.2rem;
-    font-weight: bold;
-    color: white;
-    margin-bottom: 10px;
-  }
-  
-  .hero p {
-    font-size: 1.1rem;
-    max-width: 600px;
-    color: #ddd;
-    margin-bottom: 20px;
-  }
-  
-  /* 🎨 Button */
-  .explore-btn {
-    background: linear-gradient(135deg, #00c6ff, #0072ff);
-    color: white;
-    padding: 12px 24px;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 1rem;
-    transition: all 0.3s ease-in-out;
-    box-shadow: 0px 4px 10px rgba(0, 114, 255, 0.5);
-  }
-  
-  .explore-btn:hover {
-    background: linear-gradient(135deg, #0072ff, #00c6ff);
-    box-shadow: 0px 6px 15px rgba(0, 114, 255, 0.7);
-  }
-  
-  /* ✅ Responsive Adjustments */
-  @media (max-width: 768px) {
-    .hero {
-      min-height: 50vh; /* Adjust for smaller screens */
-      padding: 60px 15px;
-    }
-  
-    .hero h1 {
-      font-size: 1.8rem; /* Reduce font size */
-    }
-  
-    .hero p {
-      font-size: 1rem;
-      max-width: 90%;
-    }
-  
-    .explore-btn {
-      padding: 10px 20px;
-      font-size: 0.9rem;
-    }
-  }
-  
-  @media (max-width: 480px) {
-    .hero {
-      min-height: 45vh;
-      padding: 50px 10px;
-    }
-  
-    .hero h1 {
-      font-size: 1.5rem;
-    }
-  
-    .hero p {
-      font-size: 0.9rem;
-      max-width: 85%;
-    }
-  }
   
 
 /* ✨ Glassmorphic Container */
 .glass-container {
-  background: rgba(255, 255, 255, 0.15);
+  background: var(--glass-bg);
   border-radius: 15px;
   padding: 30px;
   backdrop-filter: blur(15px);

@@ -8,7 +8,8 @@
   position: fixed;
   padding: 10px;
   height: 100vh;
-  height: 100%;
+  /* height: 100%; */
+  height: 100dvh24  e;
   top: 0;
   left: 0;
   width: var(--menu-width);

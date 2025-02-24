@@ -8,9 +8,12 @@ body {
 :root {
   --menu-width: 235px;
   --collapsed-width: 60px;
-  --button-color: #ff6600; /* Primary Button Color */
-  --button-hover: #f38236; /* Button Hover */
-  --highlight-text: #ff6600; /* Highlighted Text */
+  --button-color: #00c6ff;
+  --highlight-text: #00c6ff;
+  --button-hover: #77e1ff;
+  /* --button-color: #ff6600; Primary Button Color */
+  /* --button-hover: #f38236; Button Hover */
+  /* --highlight-text: #ff6600; Highlighted Text */
   --secondary-color: #00c6ff; /* Secondary Accent Color */
   --bg-overlay: rgba(0, 0, 0, 0.4); /* Background Overlay */
   --glass-bg: rgba(255, 255, 255, 0.15); /* Glass Effect Background */

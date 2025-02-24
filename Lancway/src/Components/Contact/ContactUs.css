@@ -4,7 +4,7 @@
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.7); /* Dark overlay */
-  padding: 60px 20px ;
+  padding: 60px 20px;
 }
 
 /* Container */
@@ -16,7 +16,6 @@
   z-index: 2; /* Ensure content is above overlay */
   overflow: hidden; /* Prevent AOS overflow */
 }
-
 
 /* Title & Description */
 .contact-title {
@@ -82,6 +81,7 @@
 
 .contact-info i {
   margin-right: 5px;
+  color: var(--button-color);
 }
 
 .contact-info a {
@@ -170,7 +170,7 @@
 
 .send-button:hover {
   background: var(--button-hover);
-  box-shadow: 0 0 10px rgba(255, 102, 0, 0.9);
+  box-shadow: 0 0 10px var(--box-shadow-color-blue);
 }
 
 /* Responsive */
@@ -194,5 +194,340 @@
 
   .glass-box {
     max-width: 100%;
+  }
+}
+
+/* Contact Section Container */
+.contact-details-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  padding: 50px 60px 50px 120px;
+  gap: 30px;
+  background: url("../../assets/old-black-watercolor-background.jpg") no-repeat
+    center center;
+  background-size: cover;
+  background-attachment: fixed;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* Contact Card */
+.contact-details-card {
+  background: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  border-radius: 12px;
+  padding: 20px;
+  width: 30%;
+  min-width: 300px;
+  min-height: 200px;
+  text-align: left;
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 4px 12px var(--box-shadow-hover-blue);
+  transition: all 0.3s ease-in-out;
+}
+
+.contact-details-card:hover {
+  box-shadow: 0px 6px 18px var(--box-shadow-color-blue);
+}
+
+/* Icon Styling */
+.contact-details-icon {
+  font-size: 35px;
+  color: var(--highlight-text);
+  margin-right: 14px;
+  vertical-align: middle;
+}
+
+/* Heading */
+.contact-details-card h3 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+/* Text */
+.contact-details-card p {
+  font-size: 1rem;
+  color: var(--paragraph-color);
+  margin-bottom: 5px;
+  margin-left: 48px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .contact-details-section {
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding: 40px 5%;
+  }
+
+  .contact-details-card {
+    width: 80%;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact-details-section {
+    padding: 40px 10px 40px 70px;
+    gap: 20px;
+  }
+
+  .contact-details-card {
+    width: 100%;
+    min-width: unset;
+    min-height: auto;
+    padding: 20px 15px;
+  }
+
+  .contact-details-card h3 {
+    font-size: 1.2rem;
+  }
+
+  .contact-details-card p {
+    font-size: 0.95rem;
+    margin-left: 40px;
+  }
+
+  .contact-details-icon {
+    font-size: 30px;
+    margin-right: 10px;
+  }
+}
+
+/* FAQ */
+
+.faq {
+  padding: 50px 60px 50px 120px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-header h2 {
+  color: var(--button-color);
+  font-size: 28px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Before and After Line Effect */
+.section-header h2::before,
+.section-header h2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: var(--button-color);
+  top: 50%;
+}
+
+.section-header h2::before {
+  left: -60px;
+}
+
+.section-header h2::after {
+  right: -60px;
+}
+
+/* Glass Effect for FAQ Container */
+.faq-container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+.faq {
+  padding: 50px 60px 50px 120px;
+  background: transparent;
+  backdrop-filter: blur(10px);
+}
+
+/* Section Header */
+.section-header {
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+}
+
+.section-header h2 {
+  color: var(--button-color);
+  font-size: 28px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Before and After Line Effect */
+.section-header h2::before,
+.section-header h2::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 3px;
+  background: var(--button-color);
+  top: 50%;
+}
+
+.section-header h2::before {
+  left: -60px;
+}
+
+.section-header h2::after {
+  right: -60px;
+}
+
+/* Glass Effect for FAQ Container */
+.faq-container {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 20px;
+  border-radius: 10px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* FAQ Section */
+.faq {
+  padding-left: 200px; /* Keeping space for sidebar */
+  padding-right: 140px;
+}
+
+/* FAQ Introduction */
+.faq-intro {
+  text-align: left;
+}
+
+.faq-intro h3 {
+  font-size: 22px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+.faq-intro p {
+  color: white;
+  font-size: 16px;
+  padding-bottom: 10px;
+}
+
+/* FAQ Item */
+.faq-item {
+  padding: 15px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  cursor: pointer;
+  transition: background 0.3s ease-in-out;
+}
+
+.faq-item:hover {
+  background: rgba(255, 255, 255, 0.25);
+}
+
+/* FAQ Number & Question */
+.faq-item h3 {
+  font-size: 18px;
+  color: #e0e0e0; /* Light gray text */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.faq-item .num {
+  font-weight: bold;
+  color: var(--button-color);
+  margin-right: 10px;
+}
+
+.faq-item .faq-question {
+  flex-grow: 1;
+}
+
+/* Toggle Icon */
+.faq-item .faq-toggle {
+  font-size: 20px;
+  color: #ff4b2b; /* Primary button color */
+  transition: transform 0.3s;
+}
+
+.faq-active .faq-toggle {
+  transform: rotate(180deg);
+}
+
+/* FAQ Content */
+.faq-content {
+  margin-top: 10px;
+  color: #d1d1d1;
+  text-align: justify;
+  display: none;
+  padding-left: 22px;
+}
+
+.faq-active .faq-content {
+  display: block;
+  animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+  .faq {
+    padding-left: 70px;
+    padding-right: 10px;
+  }
+
+  .section-header h2 {
+    font-size: 24px;
+  }
+
+  .faq-intro{
+    background: var(--glass-bg);
+    border-radius: 10px;
+    margin-bottom: 20px;
+    padding: 10px;
+    border: 1px solid var(--glass-border);
+  }
+
+  .faq-intro h3 {
+    font-size: 18px;
+    text-align: center;
+    color: var(--button-color);
+  }
+  
+  .faq-intro p {
+    font-size: 12px;
+    text-align: center;
+  }
+
+  .faq-item h3 {
+    font-size: 16px;
+  }
+
+  .faq-content {
+    font-size: 14px;
+    padding-left: 0px;
   }
 }
